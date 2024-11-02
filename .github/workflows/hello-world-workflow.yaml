@@ -1,0 +1,13 @@
+name: first-workflow
+on: [push]
+
+jobs:
+  shell-cmd-job:
+    runs-on: ubuntu-latest # 실제로는 latest 사용 금지, 버전 명시 필요
+    steps:
+      - name: echo Hello
+        run: echo "Hello World"
+      - name: multiple line cmd # 여러개 실행
+        run: |
+          node -v
+          npm -v
